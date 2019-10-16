@@ -19,6 +19,16 @@ hr {
 .gsap-btn:focus {
 	background-color: rgb(78, 94, 151);
 }
+.jump1:hover,
+.jump1:focus {
+	background-color: rgb(24, 26, 27);
+	
+}
+
+.jump{
+text-align: center;
+
+}
 
 .card-container {
 	transform: translateY(25px);
@@ -59,7 +69,12 @@ button.close {
 	opacity: 1;
 }
 
-button.close:hover,
-button.close:focus {
+img:hover,
+img:focus {
+
 	color: #2c2f33ff;
+}
+img{
+	object-fit: cover;
+	border-radius:50%
 }

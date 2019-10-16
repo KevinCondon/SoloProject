@@ -5,7 +5,6 @@ class BallRouter extends Component {
 
     constructor({props}) {
         super(props);
-        console.log(this.props);
         
         // logo container
         this.logoContainer = null;
@@ -17,16 +16,15 @@ class BallRouter extends Component {
 
         // create logo tween
         this.logoTween = new TimelineMax({ paused: true, repeat: -1, yoyo:true})
-        this.logoTween.to(this.logoContainer, .5, { y: 10, transformOrigin: "left top" });
+        this.logoTween.to(this.logoContainer, .25, { y: -10, transformOrigin: "left top" });
     }
 
     render() {
-        const url = `/imagines/${this.props.key}_ball`;
-        return <div className="container">
-
-            <div className="row justify-content-center">
-                <form >
-                    <img className='jump'
+        const url = `/imagines/${this.props.index + 1}_ball.png`;
+        return (
+            // <button type="button"
+            //     className="img" onClick={() => console.log('hi')}>
+                <img type="img" className="jump1"
                         alt=""
                         ref={img => this.logoContainer = img}
                         onMouseEnter={() => {
@@ -34,15 +32,11 @@ class BallRouter extends Component {
                         }}
                         onMouseLeave={() => {
                             
-                            this.logoTween.tweenTo(1)
+                            this.logoTween.tweenTo(0)
                         }}
                         src={url}>
                     </img>
-                </form>
-
-            </div>
-
-        </div>;
+        )
     }
 
 }

@@ -19,7 +19,8 @@ class SimpleTransition extends Component {
 
   render() {
     const { show } = this.state;
-    return <div className="container">
+    return(
+    <>
       <div className="row">
         <div className="col-12">
           <h3 className="text-center">Green Sock Transition</h3>
@@ -51,7 +52,7 @@ class SimpleTransition extends Component {
             });
           }}
         >
-          <div className="card col-6 transition-card simple">
+          <div className="card col-8 transition-card simple">
             <div className="card-body">
               <h5 className="card-title">
                 Animating React with GSAP
@@ -68,9 +69,8 @@ class SimpleTransition extends Component {
           </div>
         </Transition>
       </div>
-
-    </div>;
-  }
+</>
+    )}
 
 }
 
