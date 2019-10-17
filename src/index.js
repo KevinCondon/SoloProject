@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import SimpleTransition from "./simple-transition.js";
 import TransitionList from "./Transition-Card/transition-list.js";
-import BallRouter from "./BallRouter/BallRouter.js";
+import BallList from "./BallList/BallList.js";
+import { TransitionGroup } from "react-transition-group";
 
 import './modules/bootstrap.min.css';
 import './style.css';
@@ -17,17 +18,20 @@ class App extends Component {
       <div>
 
           <SimpleTransition />
+        <BallList cards={cards} />
 
-        <div className="">
+        {/* <div className="">
+          <TransitionGroup>
           {cards.map((card, index) => {
             return (
 
 
-              <BallRouter index={index} />
+              <BallRouter index={index} card={card}/>
 
             )
           })}
-          </div>
+          </TransitionGroup>
+          </div> */}
         <TransitionList cards={cards} />
 
       </div>
