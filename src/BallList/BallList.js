@@ -10,9 +10,6 @@ class BallList extends Component {
 			cards: [],
 			init: false
 		};
-		this.addNewPerson = this.addNewPerson.bind(this);
-		this.removePerson = this.removePerson.bind(this);
-		this.updateNameHandler = this.updateNameHandler.bind(this);
 	}
 
 	static getDerivedStateFromProps(props, state){
@@ -34,25 +31,6 @@ class BallList extends Component {
 		this.setState({ value: e.target.value });
 	}
 
-	removePerson(id){
-		this.setState({
-			cards: this.state.cards.filter(card => card.id !== id)
-		});
-	}
-
-	addNewPerson(e){
-		e.preventDefault();
-		if ( this.state.value !== "" ) {
-			this.setState({
-				cards: [].concat( this.state.cards, {
-					id: new Date().getTime(),
-					name: this.state.value,
-				}),
-				value: ""
-			});
-		}
-	}
-
 	render(){
     console.log(this.state.cards);
 		return <div className="container">
@@ -66,7 +44,7 @@ class BallList extends Component {
 						index={index}
 						card={card}
 						remove={this.removePerson}
-					/>
+						/>
 				))}
 				
 			</TransitionGroup>

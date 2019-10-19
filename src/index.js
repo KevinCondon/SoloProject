@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import SimpleTransition from "./simple-transition.js";
+import Tut_Intro from "./Tut_Intro/Tut_Intro.js";
 import TransitionList from "./Transition-Card/transition-list.js";
 import BallList from "./BallList/BallList.js";
 import { TransitionGroup } from "react-transition-group";
@@ -16,22 +16,7 @@ class App extends Component {
   render() {
     return (
       <div>
-
-          <SimpleTransition />
-        <BallList cards={cards} />
-
-        {/* <div className="">
-          <TransitionGroup>
-          {cards.map((card, index) => {
-            return (
-
-
-              <BallRouter index={index} card={card}/>
-
-            )
-          })}
-          </TransitionGroup>
-          </div> */}
+        <Tut_Intro cards={cards}/>
         <TransitionList cards={cards} />
 
       </div>

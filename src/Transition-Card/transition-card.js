@@ -4,6 +4,8 @@ import { Transition } from "react-transition-group";
 
 const TransitionCard = props => {
 	const { in: show, remove, card } = props;
+	console.log('Props', props);
+	
 	return <Transition
 		timeout={1000}
 		mountOnEnter

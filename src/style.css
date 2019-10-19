@@ -41,6 +41,17 @@ text-align: center;
 	padding: 1.25rem;
 }
 
+.tutorial-card {
+		margin: 15px;
+	transform: translateX(100px);
+	opacity: 0;
+	visibility: hidden;
+	background-color: rgb(69, 53, 110);
+	color: #fff;
+	height: 80vh;
+
+}
+
 .transition-card {
 	transform: translateX(100px);
 	opacity: 0;
@@ -54,8 +65,8 @@ text-align: center;
 	color: #fff;
 } 
 
-.transition-card.simple {
-	transform: translateX(100px);
+.tutorial-card.simple {
+	transform: translateY(100px);
 	opacity: 0;
 	visibility: hidden;
 }
